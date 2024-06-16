@@ -1,0 +1,209 @@
+-- Lib
+
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+
+-- Gui
+
+local GUI = Mercury:Create{
+    Name = "YowaiHub",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "SubToScripter_Yowai"
+}
+
+-- MainTab
+local AutoQuestWeeklyTab = GUI:Tab{
+        Name = "QuestWeekly",
+        Icon = "rbxassetid://8569322835"
+}
+
+-- AnotherTab
+local AutoQuestDailyTab = GUI:Tab{
+          Name = "QuestDaily",
+          Icon = "rbxassetid://8569322835"
+}
+
+
+-- Toggel For WeeklyQuest
+AutoQuestWeeklyTab:Toggle{
+	Name = "Quest GODLY",
+	StartingState = false,
+	Description = "AutoQuest",
+	Callback = function(state)
+	autogodly = state
+	while autogodly do
+
+
+game:GetService("ReplicatedStorage").Remotes.Quest:FireServer("Claim","GODLY!")
+   wait()
+  end
+end
+}
+
+
+-- Toggel For WeeklyQuest
+AutoQuestWeeklyTab:Toggle{
+	Name = "Quest Play V",
+	StartingState = false,
+	Description = "AutoQuest",
+	Callback = function(state)
+	autoplayv = state
+	while autoplayv do
+
+
+game:GetService("ReplicatedStorage").Remotes.Quest:FireServer("Claim","Play V")
+   wait()
+  end
+end
+}
+
+-- Toggel For WeeklyQuest
+AutoQuestWeeklyTab:Toggle{
+	Name = "Quest Play IV",
+	StartingState = false,
+	Description = "AutoQuest",
+	Callback = function(state)
+	autoplayiv = state
+	while autoplayiv do
+
+
+game:GetService("ReplicatedStorage").Remotes.Quest:FireServer("Claim","Play IV")
+   wait()
+  end
+end
+}
+
+-- Toggel For WeeklyQuest
+AutoQuestWeeklyTab:Toggle{
+	Name = "Quest Roll V",
+	StartingState = false,
+	Description = "AutoQuest",
+	Callback = function(state)
+	autorollv = state
+	while autorollv do
+
+
+game:GetService("ReplicatedStorage").Remotes.Quest:FireServer("Claim","Roll V")
+   wait()
+  end
+end
+}
+
+-- Toggel For WeeklyQuest
+AutoQuestWeeklyTab:Toggle{
+	Name = "Quest Roll IV",
+	StartingState = false,
+	Description = "AutoQuest",
+	Callback = function(state)
+	autorolliv = state
+	while autorolliv do
+
+
+game:GetService("ReplicatedStorage").Remotes.Quest:FireServer("Claim","Roll IV")
+   wait()
+  end
+end
+}
+
+-- Toggel For DailyQuest 
+AutoQuestDailyTab:Toggle{
+	Name = "Quest Not So Common",
+	StartingState = false,
+	Description = "AutoQuest",
+	Callback = function(state)
+	autonotsocommon = state
+	while autonotsocommon do
+
+
+game:GetService("ReplicatedStorage").Remotes.Quest:FireServer("Claim","Not So Common")
+   wait()
+  end
+end
+}
+
+-- Toggel For DailyQuest 
+AutoQuestDailyTab:Toggle{
+	Name = "Quest Play II",
+	StartingState = false,
+	Description = "AutoQuest",
+	Callback = function(state)
+	autoplayii = state
+	while autoplayii do
+
+
+game:GetService("ReplicatedStorage").Remotes.Quest:FireServer("Claim","Play II")
+   wait()
+  end
+end
+}
+
+-- Toggel For DailyQuest
+AutoQuestDailyTab:Toggle{
+	Name = "Quest That's uncommon",
+	StartingState = false,
+	Description = "AutoQuest",
+	Callback = function(state)
+	autothatsuncommon = state
+	while autothatsuncommon do
+
+
+game:GetService("ReplicatedStorage").Remotes.Quest:FireServer("Claim","That's uncommon")
+   wait()
+  end
+end
+}
+
+-- Toggel For DailyQuest
+AutoQuestDailyTab:Toggle{
+	Name = "Quest Play I",
+	StartingState = false,
+	Description = "AutoQuest",
+	Callback = function(state)
+	autoplayi = state
+	while autoplayi do
+
+
+game:GetService("ReplicatedStorage").Remotes.Quest:FireServer("Claim","Play I")
+   wait()
+  end
+end
+}
+
+-- Toggel For DailyQuest
+AutoQuestDailyTab:Toggle{
+	Name = "Quest Roll II",
+	StartingState = false,
+	Description = "AutoQuest",
+	Callback = function(state)
+	autorollii = state
+	while autorollii do
+
+
+game:GetService("ReplicatedStorage").Remotes.Quest:FireServer("Claim","Roll II")
+   wait()
+  end
+end
+}
+
+local TeleportService = game:GetService("TeleportService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+wait(10) 
+
+local Success, ErrorMessage = pcall(function()
+    TeleportService:Teleport(game.PlaceId, LocalPlayer)
+end)
+
+if ErrorMessage and not Success then
+    warn(ErrorMessage)
+end
+
+
+
+
+
+
+
+
+
